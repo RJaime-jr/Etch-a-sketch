@@ -1,0 +1,38 @@
+html{
+    background-color: black;
+    font-size: 62.5%;
+}
+
+
+body{
+    height: 1000px;
+   
+    background-color: aquamarine;
+}
+.container {
+    padding: 0 2vw;
+    display: flex;
+    justify-content: center;
+  }
+
+
+.grid {
+    border: 2px solid #a8dadc;
+    border-radius: 1rem;
+    width: 70rem;
+    height: 70rem;
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+  }
+
+
+
+.square{
+   
+    border: 0.5px solid rgba(0, 0, 0, 0.05);
+    border-radius: 0.5rem;
+   
+    
+}
