@@ -1,13 +1,25 @@
 let grid = document.querySelector('.grid');
-let gridSize = document.querySelector('input').value;
+let gridSize = document.querySelector('input');
 let gridValue = document.querySelector('.grid-size-text');
-let defVal = 12;
+let squareVal = 12;
+let gridSelect = document.querySelector('button');
+let resetButton = document.getElementById('reset');
 
-createGrid(defVal);
+//change colors
+let curColor = document.getElementsByClassName('active');
+let colorPick = document.getElementById('color-pick');
+let colVal = document.getElementById('color-val');
+
+createGrid(squareVal);
 
 
 
-
+function reset() {
+    while (grid.firstChild) {
+      grid.removeChild(grid.lastChild);
+    }
+    createGrid(squareVal);
+  }
 
 
 function createDiv(size) {
@@ -30,25 +42,35 @@ for(let i = 0; i<gridSize; i++){
 }
 }
 
-console.log(grid.clientWidth/ gridSize);
 
 grid.addEventListener("mouseover",function(e) {
     if(e.target.matches('.square')){
         e.target.classList.add("active");
-    }});
+    }
+});
 
-/*
+
     gridSize.addEventListener("input", function (e) {
-    gridSize = e.target.value;
-    gridValue.textContent = `${gridSize}x${gridSize}`;
-    console.log(gridSize);
-    console.log(gridValue);
-    });
-*/
-    gridSize.addEventListener('input', function (e) {
-        squareSize = e.target.value;
-        gridValue.textContent = `${squareSize}x${squareSize}`;
+        squareVal = e.target.value;
+        gridValue.textContent = `${squareVal}x${squareVal}`;
         console.log(gridSize);
         console.log(gridValue);
       });
-      
+
+
+      gridSelect.addEventListener('click', function(e){
+        reset();
+
+      });
+
+      resetButton.addEventListener('click', function(e){
+        reset();
+      });
+
+      colorPick.addEventListener('click', function(e){
+        colVal = document.getElementById('color-val').value;
+        document.getElementsByClassName('active').style.backgroundColor= colVal;
+
+        
+
+      });

@@ -8,13 +8,10 @@ html{
     text-align: center;
     
 }
-.spacing{
-  display: flex;
-  justify-content: center;
-}
+
 .size-box{
-  height: 100px;
-  width: 70rem;
+  height: 200px;
+  
   background-color: crimson;
   display: flex;
   justify-content: center;
@@ -38,7 +35,9 @@ body{
 .container {
     padding: 0 2vw;
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-around;
+    
   }
 
 
