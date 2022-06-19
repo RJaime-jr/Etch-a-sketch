@@ -1,3 +1,7 @@
+
+
+
+
 html{
     background-color: black;
     font-size: 62.5%;
@@ -7,7 +11,8 @@ html{
 body{
     height: 1000px;
    
-    background-color: aquamarine;
+    background-color: rgb(7, 77, 36);
+    
 }
 .container {
     padding: 0 2vw;
@@ -17,7 +22,7 @@ body{
 
 
 .grid {
-    border: 2px solid #a8dadc;
+    border: 2px solid #fdbe49;
     border-radius: 1rem;
     width: 70rem;
     height: 70rem;
@@ -30,9 +35,12 @@ body{
 
 
 .square{
-   
-    border: 0.5px solid rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
+    border: 0.5px solid rgba(8, 8, 8, 0.527);
     border-radius: 0.5rem;
-   
-    
+    background-color: white;
+}
+
+.active{
+  background-color: rgb(250, 235, 21);
 }

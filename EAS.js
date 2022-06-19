@@ -1,5 +1,5 @@
 let grid = document.querySelector('.grid');
-let gridSize = 16;
+let gridSize = 12;
 
 
 
@@ -26,3 +26,10 @@ for(let i = 0; i<gridSize; i++){
 }
 
 console.log(grid.clientWidth/ gridSize);
+
+grid.addEventListener("mouseover",function(e){
+    if(e.target.matches('.square')){
+        e.target.classList.add("active");
+    }
+
+});
