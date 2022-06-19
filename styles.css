@@ -5,6 +5,27 @@
 html{
     background-color: black;
     font-size: 62.5%;
+    text-align: center;
+    
+}
+.spacing{
+  display: flex;
+  justify-content: center;
+}
+.size-box{
+  height: 100px;
+  width: 70rem;
+  background-color: crimson;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  }
+
+.grid-size-text{
+    margin-bottom: 0.5rem;
+    color: var(--color-black);
+    font-weight: 500;
+    font-size: 1.8rem;
 }
 
 
